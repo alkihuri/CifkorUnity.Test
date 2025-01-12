@@ -1,5 +1,5 @@
 
-namespace Domain
+namespace Domain.Data
 {
     [System.Serializable]
     public class WeatherData

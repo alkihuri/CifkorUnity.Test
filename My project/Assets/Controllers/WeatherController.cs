@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
-using Domain;
+using Domain.Data;
 using UnityEngine.UI;
 using TMPro;
 

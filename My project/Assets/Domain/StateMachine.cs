@@ -10,7 +10,7 @@ namespace Domain
     public class StateMachine : MonoSinglethon<StateMachine>
     {
         private WeatherScreenState weatherScreenState;
-        private FactsListClass factsListClass;
+        private FactsListScreenState factsListClass;
         private StateBase currentState;
 
         public ContexData contexData;
@@ -21,7 +21,7 @@ namespace Domain
         {
             contexData = new ContexData();
             weatherScreenState = new WeatherScreenState();
-            factsListClass = new FactsListClass();
+            factsListClass = new FactsListScreenState();
             currentState = weatherScreenState;
             currentState.Enter(this);
         }

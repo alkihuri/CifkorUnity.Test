@@ -12,7 +12,7 @@ namespace Domain
 
         public override void Execute(StateMachine statemachine)
         {
-            Debug.Log("FactsListClass Execute");
+           // Debug.Log("FactsListClass Execute");
         }
 
         public override void Exit(StateMachine statemachine)

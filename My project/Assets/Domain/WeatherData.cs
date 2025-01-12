@@ -26,4 +26,23 @@ namespace Domain
         public string shortForecast;
         public string icon;
     }
+
+    [System.Serializable]
+    public class WeatherResponse
+    {
+        public WeatherProperties properties;
+    }
+
+    [System.Serializable]
+    public class WeatherProperties
+    {
+        public WeatherPeriod[] periods;
+    }
+
+    [System.Serializable]
+    public class WeatherPeriod
+    {
+        public string shortForecast;
+        public int temperature;
+    }
 }

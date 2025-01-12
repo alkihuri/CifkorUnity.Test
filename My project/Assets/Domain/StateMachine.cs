@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,16 +7,19 @@ using UnityEngine;
 
 namespace Domain
 {
-     
-    public class StateMachine : MonoBehaviour
+    public class StateMachine : MonoSinglethon<StateMachine>
     {
         private WeatherScreenState weatherScreenState;
         private FactsListClass factsListClass;
         private StateBase currentState;
 
+        public ContexData contexData;
+
+
 
         private void Start()
         {
+            contexData = new ContexData();
             weatherScreenState = new WeatherScreenState();
             factsListClass = new FactsListClass();
             currentState = weatherScreenState;
@@ -34,6 +38,16 @@ namespace Domain
             currentState.Enter(this);
 
             Debug.Log("State changed to " + currentState.GetType().Name);
+        }
+
+        public void FactsListScreen()
+        {
+            ChangeState(factsListClass);
+        }
+
+        public void WeatherScreenScene()
+        {
+            ChangeState(weatherScreenState);
         }
     }
 }

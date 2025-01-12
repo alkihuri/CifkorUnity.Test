@@ -2,7 +2,8 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
-using Domain.Data;   
+using Domain.Data;
+using TMPro;
 
 namespace Controllers
 {
@@ -15,10 +16,11 @@ namespace Controllers
         [SerializeField] private GameObject factItemPrefab;
         [SerializeField] private GameObject loadingIndicator;
         [SerializeField] private GameObject popup;
-        [SerializeField] private Text popupTitle;
-        [SerializeField] private Text popupDescription;
+        [SerializeField] private TextMeshProUGUI popupTitle;
+        [SerializeField] private TextMeshProUGUI popupDescription;
 
         private Coroutine currentRequest;
+
 
         public void LoadFacts()
         {
@@ -64,7 +66,7 @@ namespace Controllers
 
         private void ProcessFactsResponse(string jsonResponse)
         {
-            Breed[] breeds = JsonUtility.FromJson<Breed[]>(JsonHelper.WrapArray(jsonResponse));
+            Breed[] breeds = JsonHelper.FromJsonArray<Breed>(jsonResponse);
 
             if (breeds != null && breeds.Length > 0)
             {
@@ -80,7 +82,7 @@ namespace Controllers
         private void CreateFactItem(int index, string name, int id)
         {
             GameObject item = Instantiate(factItemPrefab, factsListContainer);
-            Text itemText = item.GetComponentInChildren<Text>();
+            TextMeshProUGUI itemText = item.GetComponentInChildren<TextMeshProUGUI>();
             itemText.text = $"{index} - {name}";
 
             Button button = item.GetComponentInChildren<Button>();
@@ -140,5 +142,5 @@ namespace Controllers
         {
             popup.SetActive(false);
         }
-    } 
+    }
 }

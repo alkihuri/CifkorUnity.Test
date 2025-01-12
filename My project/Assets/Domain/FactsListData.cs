@@ -4,7 +4,13 @@ using UnityEngine;
 namespace Domain.Data
 {
 
-	[System.Serializable]
+    [System.Serializable]
+    public class BreedsResponse
+    {
+        public Breed[] breeds;
+    }
+
+    [System.Serializable]
 	public class Breed
 	{
 		public int id;
@@ -35,5 +41,12 @@ namespace Domain.Data
 		{
 			public T[] array;
 		}
-	}
+
+        public static T[] FromJsonArray<T>(string json)
+        {
+            string wrappedJson = $"{{\"array\": {json}}}";
+            Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(wrappedJson);
+            return wrapper.array;
+        } 
+    }
 }

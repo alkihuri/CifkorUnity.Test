@@ -188,8 +188,8 @@ MonoBehaviour:
     y: 0
     width: 440.8
     height: 473.6
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -229,21 +229,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 9ca6ffff
       m_LastClickedID: -22884
-      m_ExpandedIDs: f870fffffc70ffff38a1ffff9ca6ffffcab5ffff5cbeffff6abeffff76beffff7cf6ffff7ef6ffff2afbffffd25d0000e05d0000fe5d0000025e00000a5e0000205e0000
+      m_ExpandedIDs: b038fffff870fffffc70ffff38a1ffff9ca6ffffcab5ffff5cbeffff6abeffff76beffff7cf6ffff7ef6ffff2afbffffd25d0000e05d0000fe5d0000025e00000a5e0000205e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: PopUp
+        m_OriginalName: PopUp
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -22884
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -272,8 +272,8 @@ MonoBehaviour:
     y: 0
     width: 281.60004
     height: 473.6
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 8}
   m_Panes:
   - {fileID: 8}
@@ -560,9 +560,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 531.5, y: -1097.4998, z: 0}
+    m_Target: {x: 441.82614, y: 742.15393, z: -4.243682}
     speed: 2
-    m_Value: {x: 531.5, y: -1097.4998, z: 0}
+    m_Value: {x: 441.82614, y: 742.15393, z: -4.243682}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -613,9 +613,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 442.93594
+    m_Target: 777.9221
     speed: 2
-    m_Value: 442.93594
+    m_Value: 777.9221
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -685,8 +685,8 @@ MonoBehaviour:
     y: 473.6
     width: 1100.8
     height: 249.19998
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 11}

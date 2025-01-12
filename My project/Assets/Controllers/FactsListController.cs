@@ -4,6 +4,7 @@ using UnityEngine.Networking;
 using UnityEngine.UI;
 using Domain.Data;
 using TMPro;
+using DG.Tweening;
 
 namespace Controllers
 {
@@ -17,6 +18,7 @@ namespace Controllers
         [SerializeField] private GameObject loadingIndicator;
         [SerializeField] private GameObject popup;
         [SerializeField] private TextMeshProUGUI popupTitle;
+        [SerializeField] private RectTransform popupTransform;
         [SerializeField] private TextMeshProUGUI popupDescription;
 
         private Coroutine currentRequest;
@@ -135,7 +137,9 @@ namespace Controllers
         {
             popup.SetActive(true);
             popupTitle.text = title;
-            popupDescription.text = description;
+            popupDescription.text = description; 
+            popupTransform.sizeDelta = new Vector2(popupTransform.sizeDelta.x, popupDescription.preferredHeight + 50);
+
         }
 
         public void ClosePopup()

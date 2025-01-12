@@ -19,6 +19,7 @@ namespace Domain
         public override void Exit(StateMachine statemachine)
         {
             statemachine.contexData.FactsListController.CancelCurrentRequest();
+
             Debug.Log("FactsListScreenState Exit");
         }
     }
